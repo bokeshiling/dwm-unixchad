@@ -96,6 +96,11 @@ static const Key keys[] = {
 	{ MODKEY|ControlMask,           XK_equal,  spawn,          SHCMD("${HOME}/.local/bin/audio source --plus10") },
 	{ MODKEY|ControlMask|ShiftMask, XK_equal,  spawn,          SHCMD("${HOME}/.local/bin/audio source --plus") },
 	{ MODKEY|ControlMask,           XK_BackSpace,    spawn,    SHCMD("${HOME}/.local/bin/audio source --mute") },
+	/* physical media keys */
+	{ 0,                            XK_XF86AudioRaiseVolume, spawn, SHCMD("${HOME}/.local/bin/audio sink --plus") },
+	{ 0,                            XK_XF86AudioLowerVolume, spawn, SHCMD("${HOME}/.local/bin/audio sink --minus") },
+	{ 0,                            XK_XF86AudioMute, spawn,   SHCMD("${HOME}/.local/bin/audio sink --mute") },
+	{ 0,                            XK_XF86AudioMicMute, spawn, SHCMD("${HOME}/.local/bin/audio source --mute") },
 	{ MODKEY,                       XK_bracketleft,  spawn,    SHCMD("${HOME}/.local/bin/bright --minus10") },
 	{ MODKEY|ShiftMask,             XK_bracketleft,  spawn,    SHCMD("${HOME}/.local/bin/bright --minus") },
 	{ MODKEY,                       XK_bracketright, spawn,    SHCMD("${HOME}/.local/bin/bright --plus10") },
